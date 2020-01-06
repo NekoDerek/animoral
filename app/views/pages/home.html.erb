@@ -1,0 +1,17 @@
+<%= provide(:title, 'Home') %>
+<div class="center jumbotron">
+  <h1>Добро пожаловать</h1>
+
+  <h2>
+    Это домашняя страница для тестового веб-приложения
+    <%= link_to "Animoral", 'root' %>.
+  </h2>
+  <% if logged_in? %>
+    Регистрация успешно пройдена, спасибо, что Вы с нами!)
+  <% else %>
+    <%= link_to "Регистрация", signup_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
+</div>
+<% if logged_in? %>
+  Test
+<% end %>

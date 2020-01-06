@@ -1,0 +1,22 @@
+<% provide(:title, 'Sign up') %>
+<% provide(:button_text, 'Create my account') %>
+<h1>Регистрация</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= render 'others/form' %>
+  </div>
+</div>
+<%= javascript_include_tag 'avatar' %>
+<%= javascript_tag type: "text/javascript", charset: "utf-8" do %>
+  const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 3000
+  });
+
+  Toast.fire({
+  type: 'success',
+  title: 'Signed in successfully'
+  })
+<% end %>

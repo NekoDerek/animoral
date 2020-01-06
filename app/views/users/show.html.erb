@@ -1,0 +1,12 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= image_tag @user.avatar.url(:thumb), style: "border-radius: 50%;" %>
+        <%= @user.name %>
+        <%= @user.surname %>
+      </h1>
+    </section>
+  </aside>
+</div>

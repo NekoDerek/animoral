@@ -1,0 +1,96 @@
+// ----- Variable Declarations -----
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// ----- Styles -----
+
+#mediaFile {
+  position: absolute;
+  top: -1000px;
+  
+}
+
+#profile {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+  top: -80px;
+  margin-bottom: -80px;
+  cursor: pointer;
+  background: #f4f4f4;
+  display: table;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0 5px 8px rgba(black, 0.35);
+
+  .dashes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    border: 4px dashed #ddd;
+    opacity: 1;
+  }
+
+  label {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0 30px;
+    color: grey;
+    opacity: 1;
+  }
+
+  &.dragging {
+    background-image: none !important;
+
+    .dashes {
+      animation-duration: 10s;
+      animation-name: spin;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      opacity: 1 !important;
+    }
+
+    label {
+      opacity: 0.5 !important;
+    }
+  }
+
+  &.hasImage {
+    .dashes, label {
+      opacity: 0;
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+}
+
+.offset {
+  width: 100%;
+  -webkit-appearance: none;
+  line-height: 40px;
+  color: #fff;
+  border: none;
+  background-color: #ea4c89;
+  margin-top: 30px;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase
+}
+
+// ----- Mobile styles -----
+@media only screen and (max-device-width: 736px) {
+}

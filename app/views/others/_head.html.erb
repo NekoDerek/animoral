@@ -1,0 +1,19 @@
+<%= csrf_meta_tags %>
+<%= stylesheet_link_tag    'application', media: 'all',
+                           'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+<%= javascript_include_tag  "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" %>
+<%= javascript_include_tag  "jquery.iMissYou.js" %>
+
+<%= javascript_tag type: 'text/javascript' do %>
+    jQuery(document).ready(function($){
+        $.iMissYou({
+            title: "Where are you going :с",
+            favicon: {
+                enabled: true,
+                src:'/assets/favicon/iMissYouFavicon.ico'
+            }
+        });
+    });
+<% end %>
