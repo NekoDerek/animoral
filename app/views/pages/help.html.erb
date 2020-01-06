@@ -4,8 +4,8 @@
   Эта страница была создана исключительно для ответов на будучи самые распространённые вопросы
 </p>
 <div>
-  <%= link_to 'Что такое Animoral? Какие у него перспективы?', '', class: "spoiler_links" %>
-  <div class="spoiler_body">
+  <%= button_tag 'Что такое Animoral? Какие у него перспективы?', class: "spoiler_links" %>
+  <div class="panel">
     Animoral- социальная сеть, которая была написана на языке Ruby. Само название не было придумано создателем сайта,
     оно держит начало из далёкого 2016, где было основано
     сообщество <%= link_to 'Animoral', 'https://vk.com/ani.moral' %>. С этого моменто и пошло такое название. Перспектив
@@ -16,16 +16,16 @@
 </div>
 <br/>
 <div>
-  <%= link_to 'У меня не получается зайти на сайт, что делать?', '', class: "spoiler_links" %>
-  <div class="spoiler_body">
+  <%= button_tag 'У меня не получается зайти на сайт, что делать?', class: "spoiler_links" %>
+  <div class="panel">
     Решение для этой проблемы есть. Попробуйте отключить блокировку cookie-файлов и очистите кэш браузера. Если новые
     попытки не обвенчаются успехом, напишите в багтрекер. Ссылка на него будет установлена позже.
   </div>
 </div>
 <br/>
 <div>
-  <%= link_to 'Я нашёл серьёзную уязвимость в проекте, куда обращаться?', '', class: "spoiler_links" %>
-  <div class="spoiler_body">
+  <%= button_tag 'Я нашёл серьёзную уязвимость в проекте, куда обращаться?', class: "spoiler_links" %>
+  <div class="panel">
     Не баг, а фича :)<br/>
     Ну ладно) В связи с тем, что проект относительно новый, то и, соответственно, в нём присутствует множество ошибок
     ввиду неопытности создателя. Сообщите о найденом баге в багтрекер. Самые активные пользователи будут не только
@@ -34,24 +34,24 @@
 </div>
 <br/>
 <div>
-  <%= link_to 'Я обнаружил неприемлемый контент на сайте, как на него пожаловаться?', '', class: "spoiler_links" %>
-  <div class="spoiler_body">
+  <%= button_tag 'Я обнаружил неприемлемый контент на сайте, как на него пожаловаться?', class: "spoiler_links" %>
+  <div class="panel">
     К большому сожалению, на многих участников сайта не влияют правила. В этом случае, старайтесь отправлять найденные
     нарушения в к нам на <%= link_to 'почту', 'mailto:senpaiguru1488@gmail.com' %>
   </div>
 </div>
 <br/>
 <div>
-  <%= link_to 'Я хочу работать на Вашем форуме, что мне для этого нужно сделать?', '', class: "spoiler_links" %>
-  <div class="spoiler_body">
+  <%= button_tag 'Я хочу работать на Вашем форуме, что мне для этого нужно сделать?', class: "spoiler_links" %>
+  <div class="panel">
     На данный момент мы открываем вакансии только для IT-кругов, так как сообщество ещё не достаточно большое для
     безконтрольного его ведения. Подробности на <%= link_to '/jobs', 'jobs' %>
   </div>
 </div>
 <br/>
 <div>
-  <%= link_to 'Мне понравился Ваш проект, могу ли я его поддержать?', '', class: "spoiler_links" %>
-  <div class="spoiler_body">
+  <%= button_tag 'Мне понравился Ваш проект, могу ли я его поддержать?', class: "spoiler_links" %>
+  <div class="panel">
     Так как разработчики тратят много времени и денег на разработку, то они не могут не принять пожертвования от
     пользователей.<br/>
     Если Вы тот, кто решился подкинуть нам копеечку,
@@ -60,4 +60,38 @@
   </div>
 </div>
 <br/>
+<main>
+  <h2>
+    <button aria-expanded="false">
+      Section 1
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
+        <rect class="vert" height="8" width="2" y="1" x="4"/>
+        <rect height="2" width="8" y="4" x="1"/>
+      </svg>
+    </button>
+  </h2>
+  <div hidden>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo purus quis mi cursus hendrerit eu eu
+      metus. Aliquam aliquam arcu eget aliquet scelerisque. Pellentesque sodales turpis vitae venenatis vehicula. Ut id
+      porta velit. Ut eu dignissim dui, quis gravida est. Cras quis venenatis mauris, a bibendum enim. Sed at augue
+      libero. Nullam tortor metus, tincidunt ut urna id, posuere placerat orci. Ut quis risus dictum risus facilisis
+      imperdiet quis sed eros.</p>
+  </div>
+  <h2>
+    <button aria-expanded="false">
+      Section 2
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 10 10">
+        <rect class="vert" height="8" width="2" y="1" x="4"/>
+        <rect height="2" width="8" y="4" x="1"/>
+      </svg>
+    </button>
+  </h2>
+  <div hidden>
+    <p>Nullam tortor metus, tincidunt ut urna id, posuere placerat orci. Ut quis risus dictum risus facilisis imperdiet
+      quis sed eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque commodo purus quis mi cursus
+      hendrerit eu eu metus. Aliquam aliquam arcu eget aliquet scelerisque. Pellentesque sodales turpis vitae venenatis
+      vehicula. Ut id porta velit. Ut eu dignissim dui, quis gravida est. Cras quis venenatis mauris, a bibendum enim.
+      Sed at augue libero.</p>
+  </div>
+</main>
 <%= javascript_include_tag "help" %>

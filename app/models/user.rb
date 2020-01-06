@@ -11,9 +11,13 @@ class User < ApplicationRecord
   private
 
   def capitalize_attributes
-    self.attributes.select {|a| %w[name surname].include? a}.each do |attr, val|
+    self.attributes.select {|a| %w[name surname email].include? a}.each do |attr, val|
       self.send("#{attr}=", val.try(:mb_chars).try(:squish).try(:capitalize))
     end
+  end
+
+  def avatar_reformation
+
   end
 
   validates :name, presence: true, length: {maximum: 50}

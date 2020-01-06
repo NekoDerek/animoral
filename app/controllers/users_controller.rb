@@ -33,9 +33,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
-    @user.update_attribute(:avatar, params[:user][:avatar])
-    if @user.update_attributes(user_params)
+    if @user.update(user_params)
       flash[:success] = "Profile updated"
       redirect_to @user
     else
@@ -49,18 +47,18 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
-  def form
-    ids = %w[table table-cell modal profile dashes editable]
-    ids.each do |id|
-      puts "<%= content_tag(:div, id:\"#{id}\") %>"
-      content_tag(:div, content_tag(:div, "Hello world!", content_tag(:div ), id: ""), class: "strong")
-    end
-    ids.each do
-      puts "<% end %>"
-    end
-  end
+  #def form
+  #  ids = %w[table table-cell modal profile dashes editable]
+  #  ids.each do |id|
+  #    puts "<%= content_tag(:div, id:\"#{id}\") %>"
+  #    content_tag(:div, content_tag(:div, "Hello world!", content_tag(:div ), id: ""), class: "strong")
+  #  end
+  #  ids.each do
+  #    puts "<% end %>"
+  #  end
+  #end
 
-private
+  private
 
   def user_params
     params.require(:user).permit(:avatar, :name, :surname, :email, :password,
@@ -71,6 +69,8 @@ private
     unless logged_in?
       flash[:danger] = "Please log in."
       redirect_to login_url
+      #else
+      #redirect_to @current_user
     end
   end
 

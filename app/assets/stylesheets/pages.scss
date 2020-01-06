@@ -1,3 +1,60 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+//fonts
+$font_0: Arial;
+$font_1: sans-serif;
+
+body {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+main {
+  border-width: 2px 0;
+  border-style: solid;
+
+  h2 {
+    margin: 0;
+  }
+
+  > div + h2 {
+    border-top: 2px solid;
+  }
+}
+
+html {
+  font-family: $font_0, $font_1;
+}
+
+* {
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+}
+
+h2 button {
+  all: inherit;
+  border: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5em 0;
+
+  &:focus svg {
+    outline: 2px solid;
+  }
+}
+
+button svg {
+  height: 1em;
+  margin-left: 0.5em;
+}
+
+[aria-expanded="true"] .vert {
+  display: none;
+}
+
+[aria-expanded] rect {
+  fill: currentColor;
+}

@@ -20,7 +20,7 @@
               </li>
             </ul>
           </li>
-          <%= image_tag @current_user.avatar.url(:thumb), style: "border-radius: 50%;" %>
+          <%= link_to (image_tag @current_user.avatar.url(:thumb), class: "personPhoto"), current_user %>
         <% else %>
           <li><%= link_to "Log in", login_path %></li>
         <% end %>
