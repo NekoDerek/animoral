@@ -2,7 +2,6 @@
 User-agent: *
 Disallow: *.php
 Disallow: *.rb
-#Disallow
 
 User-agent: Yandex
 Disallow: /
