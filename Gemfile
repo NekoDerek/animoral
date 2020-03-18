@@ -85,10 +85,12 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
 # Favicon master
 group :development do
   gem 'rails_real_favicon'
 end
+
 # Errors
 group :development do
   gem "better_errors"
