@@ -1,0 +1,10 @@
+.idea
+**/.keep
+.ruby-version
+.browserslistrc
+babel.config.js
+LICENSE
+/tmp
+/app/assets/images/medium/
+/app/assets/images/thumb/
+Gemfile.lock

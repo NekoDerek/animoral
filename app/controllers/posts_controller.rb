@@ -1,12 +1,13 @@
-class PostsController < ApplicationController
-  def index
-  end
+# frozen_string_literal: true
 
-  def new
-  end
+# :nodoc:
+class PostsController < ApplicationController
+  def index; end
+
+  def new; end
 
   def show
-    @post=Post.find(params[:id])
+    @post = Post.find(params[:id])
   end
 
   def create
@@ -15,7 +16,10 @@ class PostsController < ApplicationController
     redirect_to @post
   end
 
-  private def post_params
+  private
+
+
+  def post_params
     params.require(:post).permit(:title, :body)
   end
 end
