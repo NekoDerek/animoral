@@ -4,13 +4,14 @@
   "short_name": "Animoral",
   "start_url": "/",
   "icons": [
-  <% icon_sizes.map { |s| "#{s}x#{s}" }.each.with_index do |dim, i| %>
+    <% icon_sizes.map { |s| "#{s}x#{s}" }.each.with_index do |dim, i| %>
     {
       "src": "<%= image_path "serviceworker-rails/icon-#{dim}.png" %>",
       "sizes": "<%= dim %>",
       "type": "image/png"
-    }<%= i == (icon_sizes.length - 1) ? '' : ',' %>
-  <% end %>
+    }
+    <%= i == (icon_sizes.length - 1) ? '' : ',' %>
+    <% end %>
   ],
   "theme_color": "#000000",
   "background_color": "#FFFFFF",
