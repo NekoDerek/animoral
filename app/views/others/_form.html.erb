@@ -1,4 +1,4 @@
-<%= form_for(@user) do |f| %>
+<%= form_for @user do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div id="profile">
     <div class="dashes"></div>
@@ -6,7 +6,7 @@
   </div>
 
   <%= f.file_field :avatar, id: "mediaFile" %>
-  <input type="text" id="shit" style="opacity: 0" />
+  <input type="text" id="shit" style="opacity: 0"/>
 
 
   <%= f.label :name, "Name" %>
@@ -24,5 +24,5 @@
   <%= f.label :password_confirmation, "Password confirmation" %>
   <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-  <%= f.submit "Save changes", class: "btn btn-primary offset", data: {} %>
+  <%= f.submit "Save changes", class: "btn btn-primary offset" %>
 <% end %>
