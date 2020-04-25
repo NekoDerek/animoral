@@ -1,13 +1,17 @@
 <footer class="footer">
   <small>
-    The <%= link_to 'Animoral', root_path %>
-    by <%= link_to 'Edek Navalny', "https://derek2.ru" %>
+    The <%= link_to 'Animoral', root %>
+    by <%= link_to 'Эдуард Навальный', "https://derek2.ru" %>
   </small>
   <nav>
     <ul>
-      <li><%= link_to "About", '/about' %></li>
-      <li><%= link_to "Contact", '/contact' %></li>
-      <li><%= link_to "News", "#" %></li>
+      <% PagesHelper::LINKS.each do |n| %>
+        <%= content_tag(:li) do %>
+          <%= link_to n[:path] do %>
+            <%= n[:link_name] %>
+          <% end %>
+        <% end %>
+      <% end %>
     </ul>
   </nav>
 </footer>
